@@ -17,7 +17,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.setupUi(self)
         self.dateEdit.setDate(QDate.currentDate())
 
-        self.connection = pymysql.connect(host='127.0.0.1', user='root', password='232323Xyh!', db='LGUAirline', port=3306,
+        self.connection = pymysql.connect(host='127.0.0.1', user='root', password='970727', db='LGUAirline', port=3306,
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         self.cursor = self.connection.cursor()
         self.prefix = "select FlightDATE,FlightCode,TakeoffTime,EstArrTime,DepApFCC,ArrApFCC from flight where DepApFCC = 'SZX'"
@@ -40,7 +40,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
             k += 1
 
         self.pushButton.clicked.connect(self.query_flight)
-        self.pushButton.clicked.connect(self.query_crew)
+        # self.pushButton.clicked.connect(self.query_crew)
 
     def query_flight(self):
         self.tableWidget.clearContents()  # 每一次查询时清除表格中信息
@@ -67,7 +67,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
                 w += 1
             k += 1
 
-    def query_crew(self):
+   # def query_crew(self):
         
 
 if __name__ == '__main__':
