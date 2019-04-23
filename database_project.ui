@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1124</width>
-    <height>823</height>
+    <height>635</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,17 +38,18 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>6</x>
      <y>50</y>
-     <width>1101</width>
-     <height>561</height>
+     <width>1115</width>
+     <height>581</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>3ds</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="currentIndex">
@@ -76,7 +77,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>526</width>
+       <width>361</width>
        <height>141</height>
       </rect>
      </property>
@@ -89,7 +90,7 @@
          </font>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Please input the date:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Flight date:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
@@ -179,7 +180,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Destination city:</string>
+         <string>To</string>
         </property>
        </widget>
       </item>
@@ -230,7 +231,7 @@
          </font>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Departure city:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;From&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
@@ -239,11 +240,19 @@
     <widget class="QTableWidget" name="tableWidget">
      <property name="geometry">
       <rect>
-       <x>460</x>
+       <x>390</x>
        <y>20</y>
-       <width>621</width>
+       <width>691</width>
        <height>411</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
      </property>
      <row>
       <property name="text">
@@ -277,11 +286,6 @@
      </row>
      <column>
       <property name="text">
-       <string>Date</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
        <string>Flight Code</string>
       </property>
      </column>
@@ -305,7 +309,150 @@
        <string>To</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Plane Mode</string>
+      </property>
+     </column>
     </widget>
+    <widget class="QCheckBox" name="planemode">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>212</y>
+       <width>110</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Plane Mode</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>176</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Advance Search:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="planeselect">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>207</y>
+       <width>151</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>737-800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>A320</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>A321</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>737-8</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="directflight">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>256</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Direct flight</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="planeage">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>299</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Plane age &lt; 3</string>
+     </property>
+    </widget>
+    <widget class="QMdiArea" name="mdiArea">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>170</y>
+       <width>200</width>
+       <height>160</height>
+      </rect>
+     </property>
+    </widget>
+    <zorder>mdiArea</zorder>
+    <zorder>pushButton</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>tableWidget</zorder>
+    <zorder>planemode</zorder>
+    <zorder>label_16</zorder>
+    <zorder>planeselect</zorder>
+    <zorder>directflight</zorder>
+    <zorder>planeage</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -861,7 +1008,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>530</x>

@@ -20,7 +20,9 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.connection = pymysql.connect(host='127.0.0.1', user='root', password='970727', db='LGUAirline', port=3306,
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         self.cursor = self.connection.cursor()
-        self.prefix = "select FlightDATE,FlightCode,TakeoffTime,EstArrTime,DepApFCC,ArrApFCC from flight where DepApFCC = 'SZX'"
+        self.prefix = "select f.FlightCode, f.TakeoffTime, f.EstArrTime, f.DepApFCC, f.ArrApFCC, p.ModelID " \
+                      "from flight f, Plane p " \
+                      "where f.DepApFCC = 'SZX' and f.PlaneRegiNum = p.RegiNum"
         query_order = self.prefix
         self.cursor.execute(query_order)
         k = 0
@@ -48,8 +50,15 @@ class MyMainwindow(QMainWindow, Ui_Form):
         dep = self.comboBox.currentText()[-4:-1]
         arr = self.comboBox_2.currentText()[-4:-1]
 
-        self.prefix = "select FlightDATE,FlightCode,TakeoffTime,EstArrTime,DepApFCC,ArrApFCC from flight where DepApFCC = '%s' and ArrApFCC = '%s'" % (dep, arr)
-        query_order = self.prefix
+        self.prefix1 = "select f.FlightCode, f.TakeoffTime, f.EstArrTime, f.DepApFCC, f.ArrApFCC, p.ModelID "
+        self.prefix2 = "from flight f, Plane p "
+        self.prefix3 = "where f.DepApFCC = '%s' and f.ArrApFCC = '%s' and f.PlaneRegiNum = p.RegiNum and f.FlightDATE = '%s'" % (dep, arr, searchdate)
+
+        if self.planemode.isChecked():
+            planemode = self.planeselect.currentText()
+            self.prefix3 = self.prefix3 + "and p.ModelID = '%s'" % planemode
+
+        query_order = self.prefix1 + self.prefix2 + self.prefix3
         self.cursor.execute(query_order)
         k = 0
         for attribute in self.cursor:
