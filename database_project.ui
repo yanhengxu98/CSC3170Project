@@ -142,6 +142,11 @@
        <widget class="QComboBox" name="comboBox">
         <item>
          <property name="text">
+          <string>Wherever</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Shenzhen (SZX)</string>
          </property>
         </item>
@@ -157,7 +162,7 @@
         </item>
         <item>
          <property name="text">
-          <string>Guangdong (CAN)</string>
+          <string>Chengdu (CTU)</string>
          </property>
         </item>
         <item>
@@ -168,11 +173,6 @@
         <item>
          <property name="text">
           <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
          </property>
         </item>
        </widget>
@@ -188,6 +188,11 @@
        <widget class="QComboBox" name="comboBox_2">
         <item>
          <property name="text">
+          <string>Wherever</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Beijing (PEK)</string>
          </property>
         </item>
@@ -214,11 +219,6 @@
         <item>
          <property name="text">
           <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
          </property>
         </item>
        </widget>
@@ -284,6 +284,16 @@
        <string>6</string>
       </property>
      </row>
+     <row>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </row>
      <column>
       <property name="text">
        <string>Flight Code</string>
@@ -291,12 +301,12 @@
      </column>
      <column>
       <property name="text">
-       <string>Departure Time</string>
+       <string>Dep. Time</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Arrivial Time</string>
+       <string>Arr. Time</string>
       </property>
      </column>
      <column>
@@ -431,7 +441,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Plane age &lt; 3</string>
+      <string>Plane age &lt;= 3</string>
      </property>
     </widget>
     <widget class="QMdiArea" name="mdiArea">
@@ -444,6 +454,40 @@
       </rect>
      </property>
     </widget>
+    <widget class="QCheckBox" name="passanger">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>341</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Passanger &lt; </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="passangernum">
+     <property name="geometry">
+      <rect>
+       <x>131</x>
+       <y>336</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>180</string>
+     </property>
+    </widget>
     <zorder>mdiArea</zorder>
     <zorder>pushButton</zorder>
     <zorder>layoutWidget</zorder>
@@ -453,6 +497,8 @@
     <zorder>planeselect</zorder>
     <zorder>directflight</zorder>
     <zorder>planeage</zorder>
+    <zorder>passanger</zorder>
+    <zorder>passangernum</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -615,20 +661,20 @@
       </rect>
      </property>
      <property name="text">
-      <string>Li Jiagen</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>480</y>
+       <y>482</y>
        <width>218</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>P002</string>
+      <string/>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
@@ -652,6 +698,18 @@
        <width>1071</width>
        <height>401</height>
       </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>100</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
      </property>
      <row>
       <property name="text">
@@ -690,12 +748,12 @@
      </column>
      <column>
       <property name="text">
-       <string>Name</string>
+       <string>First Name</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Occupation</string>
+       <string>Last Name</string>
       </property>
      </column>
      <column>
@@ -706,6 +764,11 @@
      <column>
       <property name="text">
        <string>Phone Number</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Salary</string>
       </property>
      </column>
     </widget>
@@ -736,6 +799,62 @@
        <height>391</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </row>
      <column>
       <property name="text">
        <string>IATA</string>
@@ -756,6 +875,11 @@
        <string>Max Flight Per Day</string>
       </property>
      </column>
+     <item row="0" column="2">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
     </widget>
     <widget class="QComboBox" name="comboBox_6">
      <property name="geometry">
@@ -766,6 +890,11 @@
        <height>26</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>All</string>
+      </property>
+     </item>
      <item>
       <property name="text">
        <string>Shenzhen (SZX)</string>
@@ -801,6 +930,19 @@
        <string>Hangzhou (HGH)</string>
       </property>
      </item>
+    </widget>
+    <widget class="QPushButton" name="searchAirport">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>480</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_4">
