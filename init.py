@@ -17,10 +17,46 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.setupUi(self)
         # self.dateEdit.setDate(QDate.currentDate())
 
-        self.connection = pymysql.connect(host='127.0.0.1', user='root', password='970727', db='LGUAirline', port=3306,
+        self.connection = pymysql.connect(host='10.20.5.31', user='root', password='root', db='LGUAirline', port=3306,
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         self.cursor = self.connection.cursor()
         self.passengernum.setValidator(QIntValidator(0, 500))
+        self.newPassengerNum.setValidator(QIntValidator(0, 500))
+        self.newFlightCode.setValidator(QIntValidator(0, 10000))
+
+        self.cursor.execute('SELECT * FROM flight')
+        k = 0
+        for attribute in self.cursor:
+            print("------", attribute)
+            w = 0
+            for j in attribute:
+                print(j)
+                instance = attribute[j]
+                if type(instance) == int:
+                    newItem = QTableWidgetItem(str(instance))
+                else:
+                    newItem = QTableWidgetItem(instance)
+                if j == 'FlightCode':
+                    self.tableWidget_6.setItem(k, 0, newItem)
+                if j == 'PlaneRegiNum':
+                    self.tableWidget_6.setItem(k, 1, newItem)
+                if j == 'FlightDATE':
+                    self.tableWidget_6.setItem(k, 2, newItem)
+                if j == 'TakeoffTime':
+                    self.tableWidget_6.setItem(k, 3, newItem)
+                if j == 'DepApFCC':
+                    self.tableWidget_6.setItem(k, 4, newItem)
+                if j == 'EstArrTime':
+                    self.tableWidget_6.setItem(k, 5, newItem)
+                if j == 'ArrApFCC':
+                    self.tableWidget_6.setItem(k, 6, newItem)
+                if j == 'CapID':
+                    self.tableWidget_6.setItem(k, 7, newItem)
+                if j == 'PassengerNum':
+                    self.tableWidget_6.setItem(k, 8, newItem)
+                w += 1
+            k += 1
+
         # self.prefix = "select f.FlightCode, f.TakeoffTime, f.EstArrTime, f.DepApFCC, f.ArrApFCC, p.ModelID " \
         #               "from flight f, Plane p " \
         #               "where f.DepApFCC = 'SZX' and f.PlaneRegiNum = p.RegiNum"
@@ -45,6 +81,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.pushButton.clicked.connect(self.query_flight)
         self.pushButton_2.clicked.connect(self.query_staff)
         self.searchAirport.clicked.connect(self.query_airport)
+        self.insertFlight.clicked.connect(self.insert_flight)
 
 
 
@@ -232,6 +269,69 @@ class MyMainwindow(QMainWindow, Ui_Form):
                     self.tableWidget_3.setItem(k, 3, newItem)
                 w += 1
             k += 1
+
+    def insert_flight(self):
+        insert = "INSERT INTO FLIGHT VALUES ("
+        flightID = self.newDate.dateTime().toString("MMdd") + 'LG' + self.newFlightCode.text()
+        insert += "'%s', " % flightID
+        date = self.newDate.dateTime().toString("yyyy-MM-dd")
+        insert += "'%s', " % date
+        code = self.newFlightCode.text()
+        insert += "'LG%s', " % code
+        pilot = self.newPilotID.currentText()
+        insert += "'%s', " % pilot
+        passnum = self.newPassengerNum.text()
+        insert += "'%s', " % passnum
+        deptime = self.newDepTime.time().toString("HH:mm:ss")
+        insert += "'%s', " % deptime
+        arrtime = self.newArrTime.time().toString("HH:mm:ss")
+        insert += "'%s', " % arrtime
+        depFCC = self.newDepFCCCode.currentText()[-4:-1]
+        insert += "'%s', NULL, " % depFCC
+        arrFCC = self.newArrFCCCode.currentText()[-4:-1]
+        insert += "'%s', " % arrFCC
+        regnum = self.newRegNum.currentText()
+        insert += "'%s')" % regnum
+        print(insert)
+        self.cursor.execute(insert)
+
+        self.tableWidget_6.clearContents()
+        self.cursor.execute('SELECT * FROM flight')
+        k = 0
+        for attribute in self.cursor:
+            print("------", attribute)
+            w = 0
+            for j in attribute:
+                print(j)
+                instance = attribute[j]
+                if type(instance) == int:
+                    newItem = QTableWidgetItem(str(instance))
+                else:
+                    newItem = QTableWidgetItem(instance)
+                if j == 'FlightCode':
+                    self.tableWidget_6.setItem(k, 0, newItem)
+                if j == 'PlaneRegiNum':
+                    self.tableWidget_6.setItem(k, 1, newItem)
+                if j == 'FlightDATE':
+                    self.tableWidget_6.setItem(k, 2, newItem)
+                if j == 'TakeoffTime':
+                    self.tableWidget_6.setItem(k, 3, newItem)
+                if j == 'DepApFCC':
+                    self.tableWidget_6.setItem(k, 4, newItem)
+                if j == 'EstArrTime':
+                    self.tableWidget_6.setItem(k, 5, newItem)
+                if j == 'ArrApFCC':
+                    self.tableWidget_6.setItem(k, 6, newItem)
+                if j == 'CapID':
+                    self.tableWidget_6.setItem(k, 7, newItem)
+                if j == 'PassengerNum':
+                    self.tableWidget_6.setItem(k, 8, newItem)
+                w += 1
+            k += 1
+        self.connection.commit()
+
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
