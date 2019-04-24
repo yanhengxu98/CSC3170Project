@@ -53,7 +53,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -167,12 +167,27 @@
         </item>
         <item>
          <property name="text">
+          <string>Guangzhou (CAN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Shanghai Pudong (PVG)</string>
          </property>
         </item>
         <item>
          <property name="text">
           <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hangzhou (HGH)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Xi'an (XIY)</string>
          </property>
         </item>
        </widget>
@@ -182,45 +197,6 @@
         <property name="text">
          <string>To</string>
         </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QComboBox" name="comboBox_2">
-        <item>
-         <property name="text">
-          <string>Wherever</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Guangdong (CAN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item row="1" column="0">
@@ -233,6 +209,60 @@
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;From&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_2">
+        <item>
+         <property name="text">
+          <string>Wherever</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chengdu (CTU)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guangzhou (CAN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hangzhou (HGH)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Xi'an (XIY)</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
@@ -958,7 +988,12 @@
      </item>
      <item>
       <property name="text">
-       <string>Guangdong (CAN)</string>
+       <string>Chengdu (CTU)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Guangzhou (CAN)</string>
       </property>
      </item>
      <item>
@@ -974,6 +1009,11 @@
      <item>
       <property name="text">
        <string>Hangzhou (HGH)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Xi'an (XIY)</string>
       </property>
      </item>
     </widget>
@@ -1008,6 +1048,26 @@
       <property name="sizeConstraint">
        <enum>QLayout::SetNoConstraint</enum>
       </property>
+      <item row="3" column="5">
+       <widget class="QLabel" name="label_25">
+        <property name="text">
+         <string>Passenger Num.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_26">
+        <property name="text">
+         <string>Flight Code</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
       <item row="4" column="3">
        <widget class="QComboBox" name="newRegNum">
         <item>
@@ -1056,26 +1116,6 @@
        <widget class="QLabel" name="label_23">
         <property name="text">
          <string>Pilot ID</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="5">
-       <widget class="QLabel" name="label_25">
-        <property name="text">
-         <string>Passenger Num.</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QLabel" name="label_26">
-        <property name="text">
-         <string>Flight Code</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1136,6 +1176,12 @@
         </property>
        </widget>
       </item>
+      <item row="4" column="5">
+       <widget class="QLineEdit" name="newPassengerNum"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QTimeEdit" name="newDepTime"/>
+      </item>
       <item row="4" column="2">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
@@ -1149,136 +1195,6 @@
          <widget class="QLineEdit" name="newFlightCode"/>
         </item>
        </layout>
-      </item>
-      <item row="3" column="3">
-       <widget class="QLabel" name="label_17">
-        <property name="text">
-         <string>Reg. Num.</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="5">
-       <widget class="QLineEdit" name="newPassengerNum"/>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="label_27">
-        <property name="text">
-         <string>Date</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QDateEdit" name="newDate"/>
-      </item>
-      <item row="6" column="0">
-       <widget class="QTimeEdit" name="newDepTime"/>
-      </item>
-      <item row="5" column="2">
-       <widget class="QLabel" name="label_21">
-        <property name="text">
-         <string>Dep. FCC</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QComboBox" name="newDepFCCCode">
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Chengdu (CTU)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="5" column="3">
-       <widget class="QLabel" name="label_22">
-        <property name="text">
-         <string>Arr. Time</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="3">
-       <widget class="QTimeEdit" name="newArrTime"/>
-      </item>
-      <item row="5" column="4">
-       <widget class="QLabel" name="label_20">
-        <property name="text">
-         <string>Arr. FCC</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="4">
-       <widget class="QComboBox" name="newArrFCCCode">
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Chengdu (CTU)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-       </widget>
       </item>
       <item row="5" column="5">
        <widget class="QLabel" name="label_24">
@@ -1325,6 +1241,160 @@
         <item>
          <property name="text">
           <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLabel" name="label_22">
+        <property name="text">
+         <string>Arr. Time</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QDateEdit" name="newDate"/>
+      </item>
+      <item row="5" column="4">
+       <widget class="QLabel" name="label_20">
+        <property name="text">
+         <string>Arr. FCC</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QTimeEdit" name="newArrTime"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_21">
+        <property name="text">
+         <string>Dep. FCC</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string>Reg. Num.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_27">
+        <property name="text">
+         <string>Date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QComboBox" name="newDepFCCCode">
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chengdu (CTU)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guangzhou (CAN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hangzhou (HGH)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Xi'an (XIY)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QComboBox" name="newArrFCCCode">
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chengdu (CTU)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guangzhou (CAN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hangzhou (HGH)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Xi'an (XIY)</string>
          </property>
         </item>
        </widget>
