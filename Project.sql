@@ -67,7 +67,7 @@ CREATE TABLE FLIGHT
 	FlightDATE CHAR(10) NOT NULL,
     FlightCode VARCHAR(6) NOT NULL,
     CapID CHAR(4) NOT NULL,
-    PassangerNum Integer NOT NULL,
+    PassengerNum Integer NOT NULL,
     TakeoffTime CHAR(8) NOT NULL,
     EstArrTime CHAR(8) NOT NULL,
     DepApFCC CHAR(3) NOT NULL,

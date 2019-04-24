@@ -20,7 +20,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.connection = pymysql.connect(host='127.0.0.1', user='root', password='970727', db='LGUAirline', port=3306,
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         self.cursor = self.connection.cursor()
-        self.passangernum.setValidator(QIntValidator(0, 500))
+        self.passengernum.setValidator(QIntValidator(0, 500))
         # self.prefix = "select f.FlightCode, f.TakeoffTime, f.EstArrTime, f.DepApFCC, f.ArrApFCC, p.ModelID " \
         #               "from flight f, Plane p " \
         #               "where f.DepApFCC = 'SZX' and f.PlaneRegiNum = p.RegiNum"
@@ -45,6 +45,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.pushButton.clicked.connect(self.query_flight)
         self.pushButton_2.clicked.connect(self.query_staff)
         self.searchAirport.clicked.connect(self.query_airport)
+
 
 
     def closeEvent(self, event):
@@ -75,20 +76,24 @@ class MyMainwindow(QMainWindow, Ui_Form):
             arr = self.comboBox_2.currentText()[-4:-1]
             self.prefix3 = "where f.ArrApFcc = '%s' and f.PlaneRegiNum = p.RegiNum and f.FlightDATE = '%s' " % (arr, searchdate)
         else:
-            self.prefix3 = "where f.PlaneRegiNum = p.RegiNum and f.FlightDATE = '%s'" % searchdate
+            self.prefix3 = "where f.PlaneRegiNum = p.RegiNum and f.FlightDATE = '%s' " % searchdate
 
         self.prefix1 = "select f.FlightCode, f.TakeoffTime, f.EstArrTime, f.DepApFCC, f.ArrApFCC, p.ModelID "
         self.prefix2 = "from flight f, Plane p "
 
         if self.planemode.isChecked():
             planemode = self.planeselect.currentText()
-            self.prefix3 = self.prefix3 + "and  p.ModelID = '%s' " % planemode
+            self.prefix3 = self.prefix3 + "and p.ModelID = '%s' " % planemode
 
         if self.directflight.isChecked():
             self.prefix3 = self.prefix3 + "and f.StopByFCC is NULL "
 
         if self.planeage.isChecked():
             self.prefix3 = self.prefix3 + "and p.age <= 3 "
+
+        if self.passenger.isChecked() and self.passengernum.text() != '':
+            passengernum = int(self.passengernum.text())
+            self.prefix3 = self.prefix3 + "and f.PassengerNum <= %d " % passengernum
 
         # passenger number check
 
@@ -119,6 +124,12 @@ class MyMainwindow(QMainWindow, Ui_Form):
                     self.tableWidget.setItem(k, 4, newItem)
                 if j=='ModelID':
                     self.tableWidget.setItem(k, 5, newItem)
+                    btn = QPushButton(self.tableWidget)
+                    btn.setText('Click')
+                    self.tableWidget.setCellWidget(k, 6, btn)
+
+
+
                 w += 1
             k += 1
 

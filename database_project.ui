@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>LGU Airlines</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>4</y>
      <width>491</width>
      <height>41</height>
     </rect>
@@ -240,9 +240,9 @@
     <widget class="QTableWidget" name="tableWidget">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>380</x>
        <y>20</y>
-       <width>691</width>
+       <width>721</width>
        <height>411</height>
       </rect>
      </property>
@@ -322,6 +322,11 @@
      <column>
       <property name="text">
        <string>Plane Mode</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Detail</string>
       </property>
      </column>
     </widget>
@@ -454,7 +459,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QCheckBox" name="passanger">
+    <widget class="QCheckBox" name="passenger">
      <property name="geometry">
       <rect>
        <x>12</x>
@@ -475,7 +480,7 @@
       <string>Passanger &lt; </string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="passangernum">
+    <widget class="QLineEdit" name="passengernum">
      <property name="geometry">
       <rect>
        <x>131</x>
@@ -497,8 +502,8 @@
     <zorder>planeselect</zorder>
     <zorder>directflight</zorder>
     <zorder>planeage</zorder>
-    <zorder>passanger</zorder>
-    <zorder>passangernum</zorder>
+    <zorder>passenger</zorder>
+    <zorder>passengernum</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -793,11 +798,17 @@
     <widget class="QTableWidget" name="tableWidget_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>70</y>
        <width>1051</width>
-       <height>391</height>
+       <height>400</height>
       </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
      </property>
      <property name="font">
       <font>
@@ -805,6 +816,33 @@
        <pointsize>12</pointsize>
       </font>
      </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="rowCount">
+      <number>10</number>
+     </property>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>250</number>
+     </attribute>
+     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>45</number>
+     </attribute>
      <row>
       <property name="text">
        <string>1</string>
@@ -830,31 +868,11 @@
        <string>5</string>
       </property>
      </row>
-     <row>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>10</string>
-      </property>
-     </row>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
      <column>
       <property name="text">
        <string>IATA</string>
