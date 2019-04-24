@@ -82,6 +82,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.pushButton_2.clicked.connect(self.query_staff)
         self.searchAirport.clicked.connect(self.query_airport)
         self.insertFlight.clicked.connect(self.insert_flight)
+        self.deleteFlight.clicked.connect(self.delete_flight)
 
 
 
@@ -329,6 +330,13 @@ class MyMainwindow(QMainWindow, Ui_Form):
                 w += 1
             k += 1
         self.connection.commit()
+
+    def delete_flight(self):
+        index = self.tableWidget_6.selectionModel().currentIndex()
+        row = index.row()
+        item = self.tableWidget_6.itemFromIndex(index)
+        print(self.tableWidget_6.item(1,4).text())
+        delete = "DELETE FROM flight WHERE"
 
 
 

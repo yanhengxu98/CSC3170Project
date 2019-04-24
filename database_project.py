@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1290, 622)
+        Form.resize(1290, 737)
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(10, 4, 491, 41))
         font = QtGui.QFont()
@@ -23,7 +23,7 @@ class Ui_Form(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.tabWidget = QtWidgets.QTabWidget(Form)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 50, 1281, 581))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 50, 1281, 681))
         font = QtGui.QFont()
         font.setFamily("3ds")
         font.setPointSize(14)
@@ -350,7 +350,7 @@ class Ui_Form(object):
         self.tab_5 = QtWidgets.QWidget()
         self.tab_5.setObjectName("tab_5")
         self.gridLayoutWidget = QtWidgets.QWidget(self.tab_5)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(0, 390, 1271, 97))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(0, 470, 1271, 97))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout_2.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
@@ -516,12 +516,15 @@ class Ui_Form(object):
         self.tableWidget_6.setItem(5, 8, item)
         self.tableWidget_6.horizontalHeader().setDefaultSectionSize(134)
         self.insertFlight = QtWidgets.QPushButton(self.tab_5)
-        self.insertFlight.setGeometry(QtCore.QRect(1190, 490, 81, 31))
+        self.insertFlight.setGeometry(QtCore.QRect(1170, 580, 101, 51))
         self.insertFlight.setObjectName("insertFlight")
+        self.deleteFlight = QtWidgets.QPushButton(self.tab_5)
+        self.deleteFlight.setGeometry(QtCore.QRect(1170, 390, 101, 51))
+        self.deleteFlight.setObjectName("deleteFlight")
         self.tabWidget.addTab(self.tab_5, "")
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -744,5 +747,6 @@ class Ui_Form(object):
         self.tableWidget_6.setSortingEnabled(False)
         self.tableWidget_6.setSortingEnabled(__sortingEnabled)
         self.insertFlight.setText(_translate("Form", "Insert"))
+        self.deleteFlight.setText(_translate("Form", "Delete"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("Form", "Flight Management"))
 
