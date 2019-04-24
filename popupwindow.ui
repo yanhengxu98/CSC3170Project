@@ -6,37 +6,449 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>553</width>
-    <height>521</height>
+    <width>684</width>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Details</string>
   </property>
   <widget class="QLabel" name="FCode">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>50</y>
-     <width>71</width>
+     <x>29</x>
+     <y>65</y>
+     <width>91</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Flight Code</string>
    </property>
   </widget>
-  <widget class="QLabel" name="FligtID">
+  <widget class="QLabel" name="FID">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>20</y>
+     <x>29</x>
+     <y>25</y>
      <width>71</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Flight ID</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="IDedit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>25</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Codeedit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>65</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DepTime">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>145</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Dep. Time</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FDate">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>105</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Flight Date</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>106</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2019</year>
+     <month>5</month>
+     <day>3</day>
+    </datetime>
+   </property>
+   <property name="maximumDateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2019</year>
+     <month>5</month>
+     <day>30</day>
+    </datetime>
+   </property>
+   <property name="minimumDateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2019</year>
+     <month>3</month>
+     <day>15</day>
+    </datetime>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ArrTime">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>185</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Arr. Time</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="deptimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>145</y>
+     <width>118</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="arrtimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>186</y>
+     <width>118</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="num">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>308</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Passenger Num</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="numedit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>308</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="depport">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>268</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="arrport">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>268</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Arr. Airport</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FID_2">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>228</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Dep. Airport</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="depPortedit">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>228</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="regnum">
+   <property name="geometry">
+    <rect>
+     <x>379</x>
+     <y>25</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Plane Reg. Num</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="capedit">
+   <property name="geometry">
+    <rect>
+     <x>529</x>
+     <y>65</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="regnumedit">
+   <property name="geometry">
+    <rect>
+     <x>529</x>
+     <y>25</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="captain">
+   <property name="geometry">
+    <rect>
+     <x>379</x>
+     <y>65</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Captain ID</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="firstofficer">
+   <property name="geometry">
+    <rect>
+     <x>379</x>
+     <y>145</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>First Officer</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="foedit">
+   <property name="geometry">
+    <rect>
+     <x>529</x>
+     <y>115</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="foedit_2">
+   <property name="geometry">
+    <rect>
+     <x>529</x>
+     <y>225</y>
+     <width>121</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="firstofficer_2">
+   <property name="geometry">
+    <rect>
+     <x>379</x>
+     <y>266</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Cabin Crew</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>559</x>
+     <y>356</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>356</y>
+     <width>91</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="alter">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>356</y>
+     <width>91</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>3ds</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Alter</string>
    </property>
   </widget>
  </widget>
