@@ -311,9 +311,13 @@ class MyMainwindow(QMainWindow, Ui_Form):
         row = index.row()
         item = self.tableWidget_6.itemFromIndex(index)
         flightid = self.tableWidget_6.item(row,2).text()[-5:-3] + self.tableWidget_6.item(row,2).text()[-2:] + self.tableWidget_6.item(row,0).text()
-        delete = "DELETE FROM flight WHERE FlightID = '%s'" % flightid
-        print(delete)
-        self.cursor.execute(delete)
+        delete1 = "DELETE FROM ONDUTY WHERE FlightID = '%s' " % flightid
+        delete2 = "DELETE FROM COPILOT WHERE FlightID = '%s' " % flightid
+        delete3 = "DELETE FROM flight WHERE FlightID = '%s' " % flightid
+        print(delete1, delete2, delete3)
+        self.cursor.execute(delete1)
+        self.cursor.execute(delete2)
+        self.cursor.execute(delete3)
         self.show_flight_table()
         self.connection.commit()
 
