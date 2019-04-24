@@ -254,7 +254,7 @@ class Ui_Form(object):
         self.tableWidget_2.setHorizontalHeaderItem(5, item)
         self.tableWidget_2.horizontalHeader().setDefaultSectionSize(185)
         self.pushButton_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_2.setGeometry(QtCore.QRect(560, 510, 101, 51))
+        self.pushButton_2.setGeometry(QtCore.QRect(560, 530, 101, 51))
         self.pushButton_2.setObjectName("pushButton_2")
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.tab_2)
         self.gridLayoutWidget_2.setGeometry(QtCore.QRect(0, 500, 521, 78))
@@ -359,7 +359,7 @@ class Ui_Form(object):
         self.comboBox_6.addItem("")
         self.comboBox_6.addItem("")
         self.searchAirport = QtWidgets.QPushButton(self.tab_3)
-        self.searchAirport.setGeometry(QtCore.QRect(1140, 570, 121, 51))
+        self.searchAirport.setGeometry(QtCore.QRect(1020, 560, 121, 51))
         self.searchAirport.setObjectName("searchAirport")
         self.tabWidget.addTab(self.tab_3, "")
         self.tab_5 = QtWidgets.QWidget()
@@ -557,7 +557,7 @@ class Ui_Form(object):
         self.tabWidget.addTab(self.tab_5, "")
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

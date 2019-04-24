@@ -656,7 +656,7 @@
      <property name="geometry">
       <rect>
        <x>560</x>
-       <y>510</y>
+       <y>530</y>
        <width>101</width>
        <height>51</height>
       </rect>
@@ -980,8 +980,8 @@
     <widget class="QPushButton" name="searchAirport">
      <property name="geometry">
       <rect>
-       <x>1140</x>
-       <y>570</y>
+       <x>1020</x>
+       <y>560</y>
        <width>121</width>
        <height>51</height>
       </rect>
