@@ -53,19 +53,19 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
      <string>Flight Information</string>
     </attribute>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="searchFlight">
      <property name="geometry">
       <rect>
-       <x>1030</x>
-       <y>540</y>
-       <width>111</width>
-       <height>41</height>
+       <x>260</x>
+       <y>390</y>
+       <width>101</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="text">
@@ -77,7 +77,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>361</width>
+       <width>351</width>
        <height>141</height>
       </rect>
      </property>
@@ -167,7 +167,48 @@
         </item>
         <item>
          <property name="text">
-          <string>Guangzhou (CAN)</string>
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>To</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_2">
+        <item>
+         <property name="text">
+          <string>Wherever</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guangdong (CAN)</string>
          </property>
         </item>
         <item>
@@ -180,23 +221,6 @@
           <string>Shanghai Hongqiao (SHA)</string>
          </property>
         </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Xi'an (XIY)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>To</string>
-        </property>
        </widget>
       </item>
       <item row="1" column="0">
@@ -211,60 +235,6 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QComboBox" name="comboBox_2">
-        <item>
-         <property name="text">
-          <string>Wherever</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Chengdu (CTU)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Guangzhou (CAN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Xi'an (XIY)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
      </layout>
     </widget>
     <widget class="QTableWidget" name="tableWidget">
@@ -273,7 +243,7 @@
        <x>380</x>
        <y>20</y>
        <width>761</width>
-       <height>501</height>
+       <height>601</height>
       </rect>
      </property>
      <property name="font">
@@ -557,10 +527,10 @@
     <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>1141</width>
-       <height>471</height>
+       <x>380</x>
+       <y>20</y>
+       <width>761</width>
+       <height>601</height>
       </rect>
      </property>
      <property name="baseSize">
@@ -579,7 +549,7 @@
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>185</number>
+      <number>119</number>
      </attribute>
      <row>
       <property name="text">
@@ -651,6 +621,31 @@
        <string>15</string>
       </property>
      </row>
+     <row>
+      <property name="text">
+       <string>16</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>17</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>18</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>19</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </row>
      <column>
       <property name="text">
        <string>ID</string>
@@ -682,11 +677,11 @@
       </property>
      </column>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="searchStaff">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>530</y>
+       <x>260</x>
+       <y>170</y>
        <width>101</width>
        <height>51</height>
       </rect>
@@ -698,50 +693,17 @@
     <widget class="QWidget" name="gridLayoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>500</y>
-       <width>521</width>
-       <height>78</height>
+       <x>10</x>
+       <y>20</y>
+       <width>351</width>
+       <height>136</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="1" column="0">
-       <widget class="QComboBox" name="comboBox_3">
-        <item>
-         <property name="text">
-          <string>Cabin Crew</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Pilot</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Maintainer</string>
-         </property>
-        </item>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
          <string>Occupation</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string>Level</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="text">
-         <string/>
         </property>
        </widget>
       </item>
@@ -809,21 +771,54 @@
         </item>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_3">
+        <item>
+         <property name="text">
+          <string>Cabin Crew</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pilot</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Maintainer</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
        <widget class="QLabel" name="label_7">
         <property name="text">
          <string>First Name (Optional)</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Level</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
        <widget class="QLabel" name="label_8">
         <property name="text">
          <string>ID (Optional)</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
+      <item row="3" column="1">
        <widget class="QLineEdit" name="lineEdit_2">
         <property name="text">
          <string/>
@@ -831,6 +826,290 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Plane Information</string>
+    </attribute>
+    <widget class="QTableWidget" name="planeTable">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>20</y>
+       <width>761</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>100</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>119</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>11</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>12</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>14</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>15</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>16</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>17</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>18</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>19</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Reg. Num.</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Model ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Capacity</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Max Mileage</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Min Air Level</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>351</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Registration Number</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QComboBox" name="planeRegNum">
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-2165</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-2178</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-5165</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-5332</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-5552</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-5983</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-6312</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B-6443</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="planeAge"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Age</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>Model ID</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QComboBox" name="planeModelID">
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A321</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>737-800</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="searchPlane">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>120</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
@@ -988,12 +1267,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Chengdu (CTU)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Guangzhou (CAN)</string>
+       <string>Guangdong (CAN)</string>
       </property>
      </item>
      <item>
@@ -1009,11 +1283,6 @@
      <item>
       <property name="text">
        <string>Hangzhou (HGH)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Xi'an (XIY)</string>
       </property>
      </item>
     </widget>
@@ -1048,26 +1317,6 @@
       <property name="sizeConstraint">
        <enum>QLayout::SetNoConstraint</enum>
       </property>
-      <item row="3" column="5">
-       <widget class="QLabel" name="label_25">
-        <property name="text">
-         <string>Passenger Num.</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QLabel" name="label_26">
-        <property name="text">
-         <string>Flight Code</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="3">
        <widget class="QComboBox" name="newRegNum">
         <item>
@@ -1116,6 +1365,26 @@
        <widget class="QLabel" name="label_23">
         <property name="text">
          <string>Pilot ID</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QLabel" name="label_25">
+        <property name="text">
+         <string>Passenger Num.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_26">
+        <property name="text">
+         <string>Flight Code</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1176,12 +1445,6 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="5">
-       <widget class="QLineEdit" name="newPassengerNum"/>
-      </item>
-      <item row="6" column="0">
-       <widget class="QTimeEdit" name="newDepTime"/>
-      </item>
       <item row="4" column="2">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
@@ -1195,6 +1458,136 @@
          <widget class="QLineEdit" name="newFlightCode"/>
         </item>
        </layout>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string>Reg. Num.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLineEdit" name="newPassengerNum"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_27">
+        <property name="text">
+         <string>Date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QDateEdit" name="newDate"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QTimeEdit" name="newDepTime"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_21">
+        <property name="text">
+         <string>Dep. FCC</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QComboBox" name="newDepFCCCode">
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chengdu (CTU)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLabel" name="label_22">
+        <property name="text">
+         <string>Arr. Time</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QTimeEdit" name="newArrTime"/>
+      </item>
+      <item row="5" column="4">
+       <widget class="QLabel" name="label_20">
+        <property name="text">
+         <string>Arr. FCC</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QComboBox" name="newArrFCCCode">
+        <item>
+         <property name="text">
+          <string>Shenzhen (SZX)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beijing (PEK)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nanchang (KHN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chengdu (CTU)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Pudong (PVG)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shanghai Hongqiao (SHA)</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item row="5" column="5">
        <widget class="QLabel" name="label_24">
@@ -1245,160 +1638,6 @@
         </item>
        </widget>
       </item>
-      <item row="5" column="3">
-       <widget class="QLabel" name="label_22">
-        <property name="text">
-         <string>Arr. Time</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QDateEdit" name="newDate"/>
-      </item>
-      <item row="5" column="4">
-       <widget class="QLabel" name="label_20">
-        <property name="text">
-         <string>Arr. FCC</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="3">
-       <widget class="QTimeEdit" name="newArrTime"/>
-      </item>
-      <item row="5" column="2">
-       <widget class="QLabel" name="label_21">
-        <property name="text">
-         <string>Dep. FCC</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="3">
-       <widget class="QLabel" name="label_17">
-        <property name="text">
-         <string>Reg. Num.</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="label_27">
-        <property name="text">
-         <string>Date</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QComboBox" name="newDepFCCCode">
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Chengdu (CTU)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Guangzhou (CAN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Xi'an (XIY)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="6" column="4">
-       <widget class="QComboBox" name="newArrFCCCode">
-        <item>
-         <property name="text">
-          <string>Shenzhen (SZX)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Beijing (PEK)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nanchang (KHN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Chengdu (CTU)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Guangzhou (CAN)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Pudong (PVG)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shanghai Hongqiao (SHA)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hangzhou (HGH)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Xi'an (XIY)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
      </layout>
     </widget>
     <widget class="QTableWidget" name="tableWidget_6">
@@ -1437,7 +1676,7 @@
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
      <property name="rowCount">
-      <number>25</number>
+      <number>100</number>
      </property>
      <attribute name="horizontalHeaderDefaultSectionSize">
       <number>109</number>
@@ -1495,6 +1734,93 @@
        <string>10</string>
       </property>
      </row>
+     <row>
+      <property name="text">
+       <string>11</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>12</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </row>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
      <row/>
      <row/>
      <row/>

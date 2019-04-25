@@ -22,7 +22,8 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.cursor = self.connection.cursor()
         self.passengernum.setValidator(QIntValidator(0, 500))
         self.newPassengerNum.setValidator(QIntValidator(0, 500))
-        self.newFlightCode.setValidator(QIntValidator(0, 10000))
+        self.newFlightCode.setValidator(QIntValidator(1000, 10000))
+        self.planeAge.setValidator(QIntValidator(0, 50))
 
         self.show_flight_table()
         # self.cursor.execute('SELECT * FROM flight')
@@ -79,11 +80,13 @@ class MyMainwindow(QMainWindow, Ui_Form):
         #         w += 1
         #     k += 1
 
-        self.pushButton.clicked.connect(self.query_flight)
-        self.pushButton_2.clicked.connect(self.query_staff)
+        self.searchFlight.clicked.connect(self.query_flight)
+        self.searchStaff.clicked.connect(self.query_staff)
+        self.searchPlane.clicked.connect(self.query_plane)
         self.searchAirport.clicked.connect(self.query_airport)
         self.insertFlight.clicked.connect(self.insert_flight)
         self.deleteFlight.clicked.connect(self.delete_flight)
+
 
 
 
@@ -137,6 +140,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         # passenger number check
 
         query_order = self.prefix1 + self.prefix2 + self.prefix3
+        print(query_order)
         self.cursor.execute(query_order)
         k = 0
         for attribute in self.cursor:
@@ -166,9 +170,6 @@ class MyMainwindow(QMainWindow, Ui_Form):
                     # btn = QPushButton(self.tableWidget)
                     # btn.setText('Click')
                     # self.tableWidget.setCellWidget(k, 6, btn)
-
-
-
                 w += 1
             k += 1
 
@@ -176,8 +177,8 @@ class MyMainwindow(QMainWindow, Ui_Form):
         self.tableWidget_2.clearContents()  # 每一次查询时清除表格中信息
         occupation = self.comboBox_3.currentText()
         level = self.comboBox_4.currentText()
-        name=self.lineEdit.text()
-        staff_id=self.lineEdit_2.text()
+        name = self.lineEdit.text()
+        staff_id = self.lineEdit_2.text()
         if occupation=='Cabin Crew':
             self.prefix1 = "select c.StaffID, c.FirstName, c.LastName, c.CrewLevel, c.PhoneNum, c.Salary "
             self.prefix2 = "from CABINCREW c "
@@ -235,8 +236,7 @@ class MyMainwindow(QMainWindow, Ui_Form):
         print(staff_id)
 
     def query_airport(self):
-        self.tableWidget_3.clearContents()  # 每一次查询时清除表格中信息
-        print(self.comboBox_6.currentText())
+        self.tableWidget_3.clearContents()
         if self.comboBox_6.currentText() != "All":
             airport = self.comboBox_6.currentText()[-4:-1]
             self.prefix3 = "where a.FCCCode= '%s'" % airport
@@ -269,6 +269,47 @@ class MyMainwindow(QMainWindow, Ui_Form):
                     self.tableWidget_3.setItem(k, 2, newItem)
                 if j == 'FlightCap':
                     self.tableWidget_3.setItem(k, 3, newItem)
+                w += 1
+            k += 1
+
+    def query_plane(self):
+        self.planeTable.clearContents()
+        regnum = self.planeRegNum.currentText()
+        print(regnum)
+        age = self.planeAge.text()
+        print(age)
+        modelid = self.planeModelID.currentText()
+        print(modelid)
+        query = "SELECT p.RegiNum, p.Age, p.ModelID, m.MaxCapacity, m.MaxMileage, m.MinAirLevel from plane p, planemodel m where p.ModelID = m.ModelID "
+        if regnum != '':
+            query += "and p.RegiNum = '%s' " % regnum
+        if age != '':
+            query += "and p.Age = '%s' " % age
+        if modelid != '':
+            query += "and p.ModelID = '%s' " % modelid
+        print(query)
+        self.cursor.execute(query)
+        k = 0
+        for attribute in self.cursor:
+            w = 0
+            for j in attribute:
+                instance = attribute[j]
+                if type(instance) == int:
+                    newItem = QTableWidgetItem(str(instance))
+                else:
+                    newItem = QTableWidgetItem(instance)
+                if j == 'RegiNum':
+                    self.planeTable.setItem(k, 0, newItem)
+                if j == 'Age':
+                    self.planeTable.setItem(k, 1, newItem)
+                if j == 'ModelID':
+                    self.planeTable.setItem(k, 2, newItem)
+                if j == 'MaxCapacity':
+                    self.planeTable.setItem(k, 3, newItem)
+                if j == 'MaxMileage':
+                    self.planeTable.setItem(k, 4, newItem)
+                if j == 'MinAirLevel':
+                    self.planeTable.setItem(k, 5, newItem)
                 w += 1
             k += 1
 
