@@ -784,46 +784,6 @@
           <string>F4</string>
          </property>
         </item>
-        <item>
-         <property name="text">
-          <string>SF1</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>SF2</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>JF1</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>JF2</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>SCap</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Cap</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>W1</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>W2</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item row="0" column="1">
