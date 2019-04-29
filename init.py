@@ -142,6 +142,11 @@ class MyMainwindow(QMainWindow, Ui_Form):
         query_order = self.prefix1 + self.prefix2 + self.prefix3
         print(query_order)
         self.cursor.execute(query_order)
+
+        if self.cursor.rowcount == 0:
+            info = QMessageBox.about(self, "Information", "This query does not return any result.")
+            print(info)
+
         k = 0
         for attribute in self.cursor:
             print("------", attribute)
@@ -211,13 +216,11 @@ class MyMainwindow(QMainWindow, Ui_Form):
             w = 0
             for j in attribute:
                 print(j)
-                # 这里是将int类型转成string类型，方便后面文本设置
                 instance = attribute[j]
                 if type(instance) == int:
                     newItem = QTableWidgetItem(str(instance))
                 else:
                     newItem = QTableWidgetItem(instance)
-                # 根据循环标签一次对table中的格子进行设置
                 if j == 'PilotID' or j == 'StaffID' or j == 'MTStaffID':
                     self.tableWidget_2.setItem(k, 0, newItem)
                 if j == 'FirstName':
@@ -254,13 +257,11 @@ class MyMainwindow(QMainWindow, Ui_Form):
             w = 0
             for j in attribute:
                 print(j)
-                # 这里是将int类型转成string类型，方便后面文本设置
                 instance = attribute[j]
                 if type(instance) == int:
                     newItem = QTableWidgetItem(str(instance))
                 else:
                     newItem = QTableWidgetItem(instance)
-                # 根据循环标签一次对table中的格子进行设置
                 if j == 'FCCCode':
                     self.tableWidget_3.setItem(k, 0, newItem)
                 if j == 'AirportName':
@@ -343,9 +344,15 @@ class MyMainwindow(QMainWindow, Ui_Form):
         regnum = self.newRegNum.currentText()
         insert += "'%s')" % regnum
         print(insert)
-        self.cursor.execute(insert)
-        self.show_flight_table()
-        self.connection.commit()
+        try:
+            self.cursor.execute(insert)
+            self.show_flight_table()
+            self.connection.commit()
+        except:
+            info = QMessageBox.about(self, "Warning", "Duplicate Flight ID and date.")
+            print(info)
+
+
 
     def delete_flight(self):
         index = self.tableWidget_6.selectionModel().currentIndex()
